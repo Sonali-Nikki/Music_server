@@ -14,8 +14,18 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://music-client-higq.vercel.app"
+    ],
+    credentials: true,
+  })
+);
 
-app.use(cors());
+
+// app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
