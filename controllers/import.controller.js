@@ -1,5 +1,9 @@
 import fetch from "node-fetch";
-import supabase from "../config/supabase.js";
+import { supabase } from "../config/supabaseClient.js";
+
+/**
+ * Import Music from TheAudioDB API
+ */ 
 
 export const importMusic = async (req, res) => {
   const { artist } = req.query;

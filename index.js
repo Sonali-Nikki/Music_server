@@ -5,8 +5,10 @@ import playlistRoutes from "./routes/playlist.routes.js";
 import adminRoutes from "./routes/admin.routes.js";
 import podcastRoutes from "./routes/podcast.routes.js";
 import episodeRoutes from "./routes/episode.routes.js";
-import likeRoutes from "./routes/like.routes.js";
+import likeRoutes from "./routes/likedTrack.routes.js";
 import recentlyPlayedRoutes from "./routes/recentlyPlayed.routes.js";
+import importRoutes from "./routes/import.routes.js";
+import songRoutes from "./routes/song.routes.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -30,6 +32,7 @@ app.use("/api/episodes", episodeRoutes);
 app.use("/api/likes", likeRoutes);
 app.use("/api/recently-played", recentlyPlayedRoutes);
 app.use("/api/import", importRoutes);
+app.use("/songs", songRoutes);
 
 
 
